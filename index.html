@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Sarah's Shopping List</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@500&family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header id="header">
+    <h1>Guwahati Shopping List</h1>
+  </header>
+
+  <div class="canvas" id="canvas">
+    <h2>Needs</h2>
+    <div id="need" class="needs">
+      
+       <ul id="need-list">
+        <li>Curry Pan "Kadhai"</li>
+        <li>Flat Pan (Non-stick)</li>
+        <li>Curry Spoon</li>
+        <li>Wooden Spatula</li>
+        <li>Pan Lid (3)</li>
+        <li>Bowl (Medium, 2)</li>
+        <li>Bow (Small, 6)</li>
+        <li>Strainer (Medium, 2)</li>
+        <li>Pot (tea)</li>
+        <li>Tea Strainer</li>
+        <li>Whisk (small)</li>
+        <li>Steel Plate</li>
+        <li>Bucket (Medium, 3)</li>
+        <li>Water Drum</li>
+        <li>Rolling Pin</li>
+        <li class="emergency">Broom</li>
+        <li class="emergency">Dustpan</li>
+        <li class="emergency">Mop</li>
+        <li class="emergency">Gas Stove & Cylinder</li>
+        <li class="emergency">Water Filter</li>
+        <li>Platstic Mug</li>
+        <li class="emergency">Clothes Stand</li>
+        <li class="emergency">Indian Wardrobe</li>
+        <li>Mortar & Pestle</li>
+        <li>Grater</li>
+        <li>Washing Machine</li>
+        <li>Refrigerator</li>
+        <li class="emergency">Bathroom Floor Brush</li>
+        <li class="emergency">Bathroom Toilet Brush</li>
+        <li>Mirror</li>
+        <li class="emergency">Bleaching Powder</li>
+        <li class="emergency">Fridge</li>
+        <li class="emergency">Washing Machine</li>
+        <li class="emergency">Bed</li>
+        <li class="emergency">Drying Rope</li>
+        <li class="emergency">Hand Wash</li>
+       </ul>
+    </div>
+    <h2>Food</h2>
+    <div id="foods" class="food">
+      <ul id="food-list">
+      </ul>
+    </div>
+    <h2>Wants</h2>
+    <div id="want" class="wants">
+      <ul id="want-list">
+      </ul>
+    </div>
+    <input type="text" id="new-item-need" placeholder="Cough Medicine">
+    <input type="text" id="new-item-food" placeholder="Banana Chips">
+    <input type="text" id="new-item-want" placeholder="Dog">
+
+    <button id="new-item-need-btn" onclick="addNeed()">Add Need</button>
+    <button id="new-item-food-btn" onclick="addFood()">Add Food</button>
+    <button id="new-item-want-btn" onclick="addWant()">Add Want</button>
+  </div>
+  <script src="script.js">
+  </script>
+</body>
+</html>
