@@ -9,16 +9,19 @@ body{
   background-image: url(border6.png);
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
   background-color:black;
   background-position: center;
+
 
 }
 
 .canvas {
 display:grid;
-grid-template-columns: repeat(3, minmax(0,1fr));
-grid-template-rows: 4;
+grid-template-areas: 
+"header header header",
+"needs wants foods",
+"needsList wantsList foodsList",
+"needsInput wantsInput foodsInput";
 /*border: 10px solid rgb(0, 0, 0);*/
 gap: 1em;
 margin-left:4em;
@@ -28,6 +31,65 @@ min-height: 1dvh;
 justify-content: center;
 align-self: center;
 }
+
+.shadow{
+  box-shadow: 0 0 15px #0b061b;
+}
+
+#needs {
+  grid-area: "needs";
+}
+
+#wants {
+grid-area: "wants";
+}
+
+#foods {
+  grid-area: "foods";
+}
+
+#need-list {
+  grid-area: "needsList";
+}
+
+#want-list {
+  grid-area: "wantsList";
+}
+
+#food-list {
+  grid-area: "foodsList";
+}
+
+#newNeed{
+  grid-area: "needsInput";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  flex-direction: column;
+  
+}
+
+
+#newWant{
+  grid-area: "wantsInput";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  flex-direction: column;
+}
+
+#newFood{
+  grid-area: "foodsInput";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position:relative;
+  flex-direction: column;
+}
+
+
 
 h2{
   text-align: center;
@@ -44,6 +106,7 @@ input {
   background-color: #5d4d96;
   color:white;
   text-align: center;
+  margin:10px 0;
 }
 
 header{
@@ -59,12 +122,22 @@ header{
   padding:10px 0;
   border: 5px double rgba(255, 255, 255, 0.5);
   box-shadow: 0 0px 10px rgba(255, 255, 255, 0.7);
+  grid-area: "header";
 }
 
 ul {font-family: Helvetica;
 font-weight: bold;
 color: aliceblue;
 
+}
+
+label{
+  font-size: 2rem;
+  color:white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  text-shadow: 0 0 15px rgb(71, 0, 0);
 }
 
 .needs {
@@ -119,6 +192,7 @@ button {
   font-size: 1.2rem;
  text-decoration: double underline;
  text-decoration-color: rgba(250, 235, 215, 0.23);
+  padding:5px;
 }
 
 button:hover {
@@ -151,5 +225,14 @@ button:active {
 
 .emergency {
   font-weight: bolder;
-  color:gold
+  color:gold;
+  text-shadow: 0 0 20px rgba(218, 165, 32, 0.521);
+}
+
+@media  screen and (max-width: 400px) {
+  .canvas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
 }
