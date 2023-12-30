@@ -11,14 +11,14 @@
 </head>
 <body>
 
-  <header id="header">
+  <header id="header" class="shadow">
     <h1>Guwahati Shopping List</h1>
   </header>
 
   <div class="canvas" id="canvas">
-    <h2>Needs</h2>
-    <div id="need" class="needs">
-      
+    
+    <h2 id="needs" class="shadow">Needs</h2>
+    <div id="need" class="needs shadow">
        <ul id="need-list">
         <li>Curry Pan "Kadhai"</li>
         <li>Flat Pan (Non-stick)</li>
@@ -45,8 +45,6 @@
         <li class="emergency">Indian Wardrobe</li>
         <li>Mortar & Pestle</li>
         <li>Grater</li>
-        <li>Washing Machine</li>
-        <li>Refrigerator</li>
         <li class="emergency">Bathroom Floor Brush</li>
         <li class="emergency">Bathroom Toilet Brush</li>
         <li>Mirror</li>
@@ -55,26 +53,42 @@
         <li class="emergency">Washing Machine</li>
         <li class="emergency">Bed</li>
         <li class="emergency">Drying Rope</li>
-        <li class="emergency">Hand Wash</li>
+        <li class="emergency">Hand Wash Soap</li>
        </ul>
     </div>
-    <h2>Food</h2>
-    <div id="foods" class="food">
-      <ul id="food-list">
-      </ul>
-    </div>
-    <h2>Wants</h2>
-    <div id="want" class="wants">
+    
+
+    <h2 id="wants" class="shadow">Wants</h2>
+    <div id="want" class="wants shadow">
       <ul id="want-list">
       </ul>
     </div>
-    <input type="text" id="new-item-need" placeholder="Cough Medicine">
-    <input type="text" id="new-item-food" placeholder="Banana Chips">
-    <input type="text" id="new-item-want" placeholder="Dog">
+    
 
-    <button id="new-item-need-btn" onclick="addNeed()">Add Need</button>
-    <button id="new-item-food-btn" onclick="addFood()">Add Food</button>
-    <button id="new-item-want-btn" onclick="addWant()">Add Want</button>
+    <h2 id="foods" class="shadow">Foods</h2>
+    <div id="foods" class="food shadow">
+      <ul id="food-list">
+      </ul>
+    </div>
+    
+    <div id="newNeed">
+      <label for="new-item-need" id="labelNeed">I Need:</label>
+      <input type="text" id="new-item-need" placeholder="Cough Medicine" class="shadow">
+      <button id="new-item-need-btn" onclick="addNeed()">Add Need</button>
+    </div>
+
+    <div id="newWant">
+      <label for="new-item-want" id="labelWant">I Want:</label>
+      <input type="text" id="new-item-want" placeholder="Dog">
+      <button id="new-item-want-btn" onclick="addWant()">Add Want</button>
+    </div>
+    
+    <div id="newFood">
+      <label for="new-item-food" id="labelFood"> Food:</label>
+      <input type="text" id="new-item-food" placeholder="Banana Chips">
+      <button id="new-item-food-btn" onclick="addFood()">Add Food</button>
+    </div>
+
   </div>
   <script src="script.js">
   </script>
