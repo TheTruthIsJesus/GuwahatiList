@@ -17,8 +17,8 @@
 
   <div class="canvas" id="canvas">
     
-    <h2 id="needs" class="shadow">Needs</h2>
-    <div id="need" class="needs shadow">
+    <h2 id="needs" class="shadow" onclick="show()">Needs</h2>
+    <div id="needContainer" class="needs shadow">
        <ul id="need-list">
         <li>Curry Pan "Kadhai"</li>
         <li>Flat Pan (Non-stick)</li>
@@ -58,37 +58,38 @@
     </div>
     
 
-    <h2 id="wants" class="shadow">Wants</h2>
-    <div id="want" class="wants shadow">
+    <h2 id="wants" class="shadow" onclick="show2()">Wants</h2>
+    <div id="wantContainer" class="wants shadow">
       <ul id="want-list">
       </ul>
     </div>
     
 
-    <h2 id="foods" class="shadow">Foods</h2>
-    <div id="foods" class="food shadow">
+    <h2 id="foods" class="shadow" onclick="show3()">Foods</h2>
+    <div id="foodContainer" class="food shadow">
       <ul id="food-list">
       </ul>
     </div>
-    
+  </div>
+
+  <div id="input-container">
     <div id="newNeed">
       <label for="new-item-need" id="labelNeed">I Need:</label>
-      <input type="text" id="new-item-need" placeholder="Cough Medicine" class="shadow">
+      <input type="text" id="new-item-need" placeholder="Example: Cough Medicine" class="shadow">
       <button id="new-item-need-btn" onclick="addNeed()">Add Need</button>
     </div>
 
     <div id="newWant">
       <label for="new-item-want" id="labelWant">I Want:</label>
-      <input type="text" id="new-item-want" placeholder="Dog">
+      <input type="text" id="new-item-want" placeholder="Example: Dog">
       <button id="new-item-want-btn" onclick="addWant()">Add Want</button>
     </div>
     
     <div id="newFood">
       <label for="new-item-food" id="labelFood"> Food:</label>
-      <input type="text" id="new-item-food" placeholder="Banana Chips">
+      <input type="text" id="new-item-food" placeholder="Example: Banana Chips">
       <button id="new-item-food-btn" onclick="addFood()">Add Food</button>
     </div>
-
   </div>
   <script src="script.js">
   </script>
