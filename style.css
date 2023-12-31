@@ -308,6 +308,7 @@ width:60%;
   }
 
   #storage{
-    margin: 2em 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
   }
 }
