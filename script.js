@@ -94,4 +94,7 @@ function load(){
 
 function clear(){
     localStorage.clear();
+    localStorage.removeItem("data");
+    localStorage.removeItem("data2");
+    localStorage.removeItem("data3");
 }
