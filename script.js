@@ -93,5 +93,5 @@ function load(){
 }
 
 function clear(){
-    window.localStorage.clear();
+    localStorage.clear();
 }
