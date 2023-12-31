@@ -273,6 +273,14 @@ display: none;
   display: grid !important;
 }
 
+#storage{
+  display:flex;
+justify-content: center;
+width:60%;
+}
+  
+
+
 @media  screen and (max-width: 400px) {
   .canvas{
     display: flex;
@@ -287,6 +295,7 @@ display: none;
 
   #newNeed{
     flex-direction: column;
+    
   }
 
   #newWant{
