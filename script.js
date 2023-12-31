@@ -65,3 +65,6 @@ function show3(){
     let foodDiv = document.getElementById("foodContainer")
     foodDiv.classList.toggle("reveal")
 }
+
+let audio = document.getElementById("harvest");
+audio.volume = 0.2; 
