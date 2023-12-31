@@ -22,7 +22,6 @@ function addNeed(){
     
 }
 inputNeed.value = ""
-save()
 }
 
 function addWant(){
@@ -36,7 +35,6 @@ function addWant(){
     wants.appendChild(newWant)
 }
 inputWant.value = ""
-save()
 }
 
 function addFood(){
@@ -51,35 +49,49 @@ function addFood(){
     
 }
 inputFood.value = ""
-save()
 }
 
 function show(){
    let needDiv = document.getElementById("needContainer")
     needDiv.classList.toggle("reveal")
+
 }
 
 function show2(){
     let wantDiv = document.getElementById("wantContainer")
     wantDiv.classList.toggle("reveal")
+
 }
 
 function show3(){
     let foodDiv = document.getElementById("foodContainer")
     foodDiv.classList.toggle("reveal")
+
 }
 
 let audio = document.getElementById("harvest");
 audio.volume = 0.2; 
 
-let lists = document.querySelectorAll("li").innerHTML
+let needList = document.getElementById("need-list")
+let wantList = document.getElementById("want-list")
+let foodList = document.getElementById("food-list")
 
-console.log(lists)
+console.log(needList)
+console.log(wantList)
+console.log(foodList)
+
 function save(){
-    localStorage.setItem("data", lists);
+localStorage.setItem("data", needList.innerHTML);
+   localStorage.setItem("data2", wantList.innerHTML);
+   localStorage.setItem("data3", foodList.innerHTML);
 }
 
 function load(){
-    lists = localStorage.getItem("data")
+    needList.innerHTML = localStorage.getItem("data");
+    wantList.innerHTML = localStorage.getItem("data2");
+    foodList.innerHTML = localStorage.getItem("data3");
 }
-load()
+
+function clear(){
+    window.localStorage.clear();
+}
