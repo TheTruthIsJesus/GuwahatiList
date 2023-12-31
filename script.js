@@ -22,6 +22,7 @@ function addNeed(){
     
 }
 inputNeed.value = ""
+save()
 }
 
 function addWant(){
@@ -35,6 +36,7 @@ function addWant(){
     wants.appendChild(newWant)
 }
 inputWant.value = ""
+save()
 }
 
 function addFood(){
@@ -49,6 +51,7 @@ function addFood(){
     
 }
 inputFood.value = ""
+save()
 }
 
 function show(){
@@ -68,3 +71,15 @@ function show3(){
 
 let audio = document.getElementById("harvest");
 audio.volume = 0.2; 
+
+let lists = document.querySelectorAll("li").innerHTML
+
+console.log(lists)
+function save(){
+    localStorage.setItem("data", lists);
+}
+
+function load(){
+    lists = localStorage.getItem("data")
+}
+load()
