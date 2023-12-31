@@ -10,7 +10,6 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   background-color:black;
-  background-position: center;
 
 
 }
@@ -26,10 +25,15 @@ grid-template-areas:
 gap: 1em;
 margin-left:4em;
 margin-right:4em;
-margin-bottom:8em;
+margin-bottom:2em;
 min-height: 1dvh;
 justify-content: center;
 align-self: center;
+}
+
+#input-container{
+  display:grid;
+  place-items: center;
 }
 
 .shadow{
@@ -38,14 +42,20 @@ align-self: center;
 
 #needs {
   grid-area: "needs";
+  grid-column: 1;
+  grid-row: 2;
 }
 
 #wants {
 grid-area: "wants";
+grid-column: 2;
+  grid-row: 2;
 }
 
 #foods {
   grid-area: "foods";
+  grid-column: 3;
+  grid-row: 2;
 }
 
 #need-list {
@@ -63,30 +73,35 @@ grid-area: "wants";
 #newNeed{
   grid-area: "needsInput";
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position:relative;
-  flex-direction: column;
-  
+  flex-direction: row;
+  width:500px;
+  margin-bottom: .5em;
 }
 
 
 #newWant{
   grid-area: "wantsInput";
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position:relative;
-  flex-direction: column;
+  flex-direction: row;
+  width:500px;
+  margin-bottom: .5em;
+
 }
 
 #newFood{
   grid-area: "foodsInput";
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position:relative;
-  flex-direction: column;
+  flex-direction: row;
+  width:500px;
 }
 
 
@@ -143,7 +158,7 @@ label{
 .needs {
   background-color: #454057;
   grid-column: 1;
-  grid-row: 2;
+  grid-row: 3;
   border-radius: 10px;
   border-top: 4px ridge whitesmoke;
   border-bottom: 8px ridge whitesmoke;
@@ -159,7 +174,7 @@ li {
 .food {
   background-color: #454057;
   grid-column: 3;
-  grid-row: 2;
+  grid-row: 3;
   border-radius: 10px;
   border-top: 4px ridge whitesmoke;
 border-bottom: 8px ridge whitesmoke;
@@ -171,7 +186,7 @@ padding-right: 10px;
 .wants {
   background-color: #454057;
 grid-column: 2;
-grid-row: 2;
+grid-row: 3;
 border-radius: 10px;
 border-top: 4px ridge whitesmoke;
 border-bottom: 8px ridge whitesmoke;
@@ -223,10 +238,39 @@ button:active {
 
 }
 
+ul li.strike{
+  color: coral;
+  text-decoration: line-through;
+}
+
+
+
 .emergency {
   font-weight: bolder;
   color:gold;
   text-shadow: 0 0 20px rgba(218, 165, 32, 0.521);
+}
+
+
+#needContainer{
+position:relative;
+display: none;
+}
+
+#wantContainer{
+  position:relative;
+  display: none;
+  }
+
+#foodContainer{
+  position:relative;
+  display: none;
+  }  
+
+
+
+.reveal{
+  display: grid !important;
 }
 
 @media  screen and (max-width: 400px) {
@@ -234,5 +278,25 @@ button:active {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+  }
+
+  #input-container{
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aliceblue;
+  }
+
+  #newNeed{
+    flex-direction: column;
+    
+  }
+
+  #newWant{
+    flex-direction: column;
+  }
+
+  #newFood{
+    flex-direction: column;
+    margin-bottom:3em;
   }
 }
