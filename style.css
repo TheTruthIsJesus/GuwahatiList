@@ -305,6 +305,9 @@ width:60%;
 
   #newFood{
     flex-direction: column;
-    margin-bottom:3em;
+  }
+
+  #storage{
+    margin: 2em 0;
   }
 }
